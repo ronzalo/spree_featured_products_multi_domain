@@ -21,7 +21,7 @@
     <tbody>
       <% @featured_products.each do |product| %>
         <tr>
-          <td><%= product.product.name %></td>
+          <td><%= product.product ? product.product.name : 'No product' %></td>
           <td><%= product.store_name %></td>
           <td class='actions'>
             <%= link_to_edit product.id, no_text: true %>
